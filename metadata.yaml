@@ -1,0 +1,6 @@
+homepage: "https://www.dnb.com/products/marketing-sales/dnb-visitor-intelligence.html"
+versions:
+  # Latest version
+  - sha: c33618bdf2d5fe6dd833c71f4f6947edab729acb
+    changeNotes: |1
+      Initial release of GTM template for Visitor Intelligence
