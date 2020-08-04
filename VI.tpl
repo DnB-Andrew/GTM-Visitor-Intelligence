@@ -448,6 +448,7 @@ function gaBuildData(dnb_data){
 function sendDatatoGA(custDimensions){
   if (cidFormatted == ''){
     cidFormatted = Math.floor(Math.random() * 10000000000) + '.' + Math.floor(Math.random() * 10000000000);
+    cidFormatted = '';
   }
   //log('sending to ga');
   var gaHitURL = 'https://www.google-analytics.com/collect?v=1&t=event&tid=' + uaID + '&cid=' + cidFormatted + '&ec=VI_Complete&ni=1&' + custDimensions;
