@@ -388,13 +388,23 @@ const apiKey = data.apiKey;
 const coreTag = "https://cdn-0.d41.co/tags/dnb_coretag_v5.min.js";
 const viScript =  "https://" + apiKey + ".d41.co/sync/";
 let uaID = data.gaUID;
-const cid = getCookieValues('_ga');
+var cid = getCookieValues('_ga');
+var cidFormatted = '';
+
+//log(cid);
+if (cid.length == 0){
+
+}
+else {
+  cid = getCookieValues('_ga');
+  cidFormatted = cid[0].split('.')[2] + '.' +  cid[0].split('.')[3];
+}
+
 
 if (uaID.indexOf('UA') == -1){
     uaID = 'UA-' + uaID;
     }
-var cidFormatted = '';
-cidFormatted = cid[0].split('.')[2] + '.' +  cid[0].split('.')[3];
+
 //log(cidFormatted);
 
 function onCoreSuccess(){
@@ -446,9 +456,6 @@ function gaBuildData(dnb_data){
 }
 
 function sendDatatoGA(custDimensions){
-  if (cidFormatted == ''){
-    cidFormatted = '';
-  }
   //log('sending to ga');
   var gaHitURL = 'https://www.google-analytics.com/collect?v=1&t=event&tid=' + uaID + '&cid=' + cidFormatted + '&ec=VI_Complete&ni=1&' + custDimensions;
   sendPixel(gaHitURL);
