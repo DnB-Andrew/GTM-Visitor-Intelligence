@@ -447,7 +447,6 @@ function gaBuildData(dnb_data){
 
 function sendDatatoGA(custDimensions){
   if (cidFormatted == ''){
-    cidFormatted = Math.floor(Math.random() * 10000000000) + '.' + Math.floor(Math.random() * 10000000000);
     cidFormatted = '';
   }
   //log('sending to ga');
