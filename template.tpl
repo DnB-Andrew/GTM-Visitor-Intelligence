@@ -13,14 +13,13 @@ ___INFO___
   "id": "cvt_temp_public_id",
   "version": 1,
   "securityGroups": [],
-  "displayName": "VI",
+  "displayName": "Visitor Intelligence",
   "brand": {
     "id": "brand_dummy",
     "displayName": "",
     "thumbnail": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAkACQAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAAQABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9GP8AgpZ8VtF+G37SHhqH4q6b4yX4U6t4dkt9E1bRtUa2tbfxEJZmMNyqsu1niFv5MjkIHLhgy7ins/7J3xp1rQLHwf8ADP4iW+sQePJPDi6ml9dlZYdUVWIeMSgktPEhTeDknlsnqfmj9tOfwP4G/wCCgPi7Vv2i/CvijxL8N/EHgi30bwRPa6VdalplvIxf7fasluCUvZZPKeOQgFQoO5cKQ7/glf4H+Mn/AAuDw9P8TvBnjyHwToWgag3w61DXry3e90SxluVRLTUkG2T7WbcRheM7OCvyZT6iVOEsAo1Nkrp93Z25dd76TXz3SPgYzqwzd1KG8pcrVr2jeKbnpomlek76bbN2/9k\u003d"
   },
-  "categories" : ["MARKETING", "ANALYTICS"]
-  "description": "Visitor Intelligence",
+  "description": "D\u0026B Visitor Intelligence pulls rich business data associated with cookies and IP addresses hitting your website, providing a deeper profile of your digital traffic.",
   "containerContexts": [
     "WEB"
   ]
