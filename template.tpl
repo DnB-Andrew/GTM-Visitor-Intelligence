@@ -380,11 +380,12 @@ const copyFromWindow = require('copyFromWindow');
 const callInWindow = require('callInWindow');
 const getCookieValues = require('getCookieValues');
 const sendPixel = require('sendPixel');
+const encodeUriComponent = require('encodeUriComponent');
 
 //log('data =', data);
 const inputData = data;
 
-const apiKey = data.apiKey;
+const apiKey = encodeUriComponent(data.apiKey);
 const coreTag = "https://cdn-0.d41.co/tags/dnb_coretag_v5.min.js";
 const viScript =  "https://" + apiKey + ".d41.co/sync/";
 let uaID = data.gaUID;
@@ -414,6 +415,7 @@ function onCoreSuccess(){
 
 function onCoreFailure(){
 	log(' https://cdn-0.d41.co/tags/dnb_coretag_v5.min.js failed to load');
+    data.gtmOnFailure();
 }
 
 function onVISuccess(){
@@ -427,11 +429,15 @@ function onVISuccess(){
     if (data.customDimensions){
      gaBuildData(dnb_data); 
     }
+    else{
+      data.gtmOnSuccess();
+    }
   });
 }
 
 function onVIFailure(){
   log('Failed to load', viScript);
+  data.gtmOnFailure();
 }
 
 function pushtoDataLayer(dnbData){
@@ -459,10 +465,10 @@ function sendDatatoGA(custDimensions){
   //log('sending to ga');
   var gaHitURL = 'https://www.google-analytics.com/collect?v=1&t=event&tid=' + uaID + '&cid=' + cidFormatted + '&ec=VI_Complete&ni=1&' + custDimensions;
   sendPixel(gaHitURL);
+  data.gtmOnSuccess();
 }
 
 injectScript(coreTag, onCoreSuccess, onCoreFailure);
-data.gtmOnSuccess();
 
 
 ___WEB_PERMISSIONS___
