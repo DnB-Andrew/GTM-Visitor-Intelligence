@@ -385,7 +385,7 @@ const encodeUriComponent = require('encodeUriComponent');
 //log('data =', data);
 const inputData = data;
 
-const apiKey = encodeUriComponent(data.apiKey);
+const apiKey = encodeUriComponent(data.apiKey.toString());
 const coreTag = "https://cdn-0.d41.co/tags/dnb_coretag_v5.min.js";
 const viScript =  "https://" + apiKey + ".d41.co/sync/";
 let uaID = data.gaUID;
@@ -704,6 +704,13 @@ ___WEB_PERMISSIONS___
         "versionId": "1"
       },
       "param": [
+        {
+          "key": "allowedUrls",
+          "value": {
+            "type": 1,
+            "string": "specific"
+          }
+        },
         {
           "key": "urls",
           "value": {
