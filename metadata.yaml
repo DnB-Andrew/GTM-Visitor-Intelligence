@@ -2,6 +2,6 @@ homepage: "https://www.dnb.com/"
 documentation: "https://www.dnb.com/products/marketing-sales/dnb-visitor-intelligence.html"
 versions:
   # Latest version
-  - sha: 7165b5c3d2ba87fc2079abef5eaeff4c95c8229b
+  - sha: b0bbf772a3f1a7fb84bf3db71f79ee9ff902ccbd
     changeNotes: |2
-      Encoded URL to GA
+      Icon Updated
