@@ -41,7 +41,7 @@ ___TEMPLATE_PARAMETERS___
     "displayName": "Google Analytics Property ID",
     "simpleValueType": true,
     "canBeEmptyString": true,
-    "valueHint": "UA-163165954-1"
+    "valueHint": "UA-XXXXXXXXX-X"
   },
   {
     "type": "SIMPLE_TABLE",
