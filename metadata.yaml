@@ -3,5 +3,5 @@ documentation: "https://www.dnb.com/products/marketing-sales/dnb-visitor-intelli
 versions:
   # Latest version
   - sha: b0bbf772a3f1a7fb84bf3db71f79ee9ff902ccbd
-    changeNotes: |2
-      Icon Updated
+    changeNotes: |3
+      GA helper text updated
