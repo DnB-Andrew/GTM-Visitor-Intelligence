@@ -353,6 +353,14 @@ ___TEMPLATE_PARAMETERS___
           {
             "value": "ipCountry",
             "displayValue": "ipCountry"
+          },
+          {
+            "value": "jobFunction",
+            "displayValue": "jobFunction"
+          },
+          {
+            "value": "jobSeniority",
+            "displayValue": "jobSeniority"
           }
         ],
         "macrosInSelect": true
@@ -451,10 +459,14 @@ function gaBuildData(dnb_data){
   var custDimensions = '';
   for (var i=0; i<data.customDimensions.length;i++){
     if (i==0){
+      if(dnb_data[data.customDimensions[i].viValue]){
     custDimensions = data.customDimensions[i].custDim + "=" + dnb_data[data.customDimensions[i].viValue];
+      }
     }
     else{
+      if(dnb_data[data.customDimensions[i].viValue]){
       custDimensions = custDimensions + '&' + data.customDimensions[i].custDim + "=" + dnb_data[data.customDimensions[i].viValue];
+      }
     }
   }
   //log('custDimension string', custDimensions);
