@@ -1,4 +1,4 @@
-﻿___TERMS_OF_SERVICE___
+___TERMS_OF_SERVICE___
 
 By creating or modifying this file you agree to Google Tag Manager's Community
 Template Gallery Developer Terms of Service available at
@@ -460,12 +460,12 @@ function gaBuildData(dnb_data){
   for (var i=0; i<data.customDimensions.length;i++){
     if (i==0){
       if(dnb_data[data.customDimensions[i].viValue]){
-    custDimensions = data.customDimensions[i].custDim + "=" + dnb_data[data.customDimensions[i].viValue];
+    custDimensions = data.customDimensions[i].custDim + "=" +  encodeUriComponent(dnb_data[data.customDimensions[i].viValue]);
       }
     }
     else{
       if(dnb_data[data.customDimensions[i].viValue]){
-      custDimensions = custDimensions + '&' + data.customDimensions[i].custDim + "=" + dnb_data[data.customDimensions[i].viValue];
+      custDimensions = custDimensions + '&' + data.customDimensions[i].custDim + "=" +  encodeUriComponent(dnb_data[data.customDimensions[i].viValue]);
       }
     }
   }
@@ -475,6 +475,7 @@ function gaBuildData(dnb_data){
 
 function sendDatatoGA(custDimensions){
   //log('sending to ga');
+  //log('custom dimensions ! ' + custDimensions);
   var gaHitURL = 'https://www.google-analytics.com/collect?v=1&t=event&tid=' + uaID + '&cid=' + cidFormatted + '&ec=VI_Complete&ni=1&' + custDimensions;
   sendPixel(gaHitURL);
   data.gtmOnSuccess();
