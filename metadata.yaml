@@ -2,5 +2,5 @@ homepage: "https://www.dnb.com/"
 documentation: "https://www.dnb.com/products/marketing-sales/dnb-visitor-intelligence.html"
 versions:
   # Latest version
-  - sha: 7bb04c3f18cca84e9c8fa71f241f38022766f2b5
-    changeNotes: Added error handling and more VI attributes
+  - sha: 94c41f214c32c2a8eb27fe35441e5552ee9b2461
+    changeNotes: Fixed encoding issue
